@@ -1,0 +1,54 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20230119134014
+Username: TYLI\Svc.WorkdayTasks
+RunAs User: TYLI\Svc.WorkdayTasks
+Configuration Name: 
+Machine: CHI-SVR-HR (Microsoft Windows NT 10.0.17763.0)
+Host Application: powershell.exe -ExecutionPolicy Bypass -File G:\HR Tech\PowerShell Scripts\WorkdayVisionDemographicsEnhancement.ps1 -WindowStyle Hidden
+Process ID: 7312
+PSVersion: 5.1.17763.3770
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.3770
+BuildVersion: 10.0.17763.3770
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is G:\HR Tech\Logs\PowerShell\PowerShell_transcript.CHI-SVR-HR.Pp9WzNEk.20230119134014.txt
+INFO: Found /WorkdayVision/Production/Demographics/Vision_Demographics_Full_20230119_0504.csv to download from sftp site
+INFO: Decrypting file to G:\HR Tech\DemographicFiles\FromWorkday\Decrypted with a name of Vision_Demographics_Full_20230119_0504.csv
+INFO: Downloaded and encrypted file
+INFO: Removing downloaded encrypted file
+INFO: Running BR Program to enhance file
+INFO: BR Program finished running
+INFO: Removing decrypted file
+INFO: Removed decrypted file
+INFO: Encrypting file
+INFO: Finding files to remove that are decrypted from BR program
+For-EachObject : The term 'For-EachObject' is not recognized as the name of a cmdlet, function, script file, or 
+operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try 
+again.
+At G:\HR Tech\PowerShell Scripts\WorkdayVisionDemographicsEnhancement.ps1:71 char:16
++ $FilesFromBR | For-EachObject {
++                ~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (For-EachObject:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+For-EachObject : The term 'For-EachObject' is not recognized as the name of a cmdlet, function,
+script file, or operable program. Check the spelling of the name, or if a path was included,
+verify that the path is correct and try again.
+At G:\HR Tech\PowerShell Scripts\WorkdayVisionDemographicsEnhancement.ps1:71 char:16
++ $FilesFromBR | For-EachObject {
++                ~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (For-EachObject:String) [], CommandNotFoundExceptio
+   n
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+INFO: Removing decrypted file (Vision_Demographics_Full_20230119_0504_Enhanced.csv.FullName)
+INFO: Uploading G:\HR Tech\DemographicFiles\ToOneDeltek\Enrypted\Vision_Demographics_Full_20230119_0504_Enhanced.csv.pgp to sftp.tylin.com Destination: /WorkdayVision/Staging/Demographics/Outbound
+INFO: Finished running process, please review log for WARNING, reach out to Mark.Ince@tylin.com or ServiceDesk@tylin.com if further assistance is required
+**********************
+Windows PowerShell transcript end
+End time: 20230119134038
+**********************

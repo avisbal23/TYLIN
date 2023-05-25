@@ -1,0 +1,58 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20230119141123
+Username: TYLI\Svc.WorkdayTasks
+RunAs User: TYLI\Svc.WorkdayTasks
+Configuration Name: 
+Machine: CHI-SVR-HR (Microsoft Windows NT 10.0.17763.0)
+Host Application: powershell.exe -ExecutionPolicy Bypass -File G:\HR Tech\PowerShell Scripts\WorkdayVisionDemographicsEnhancement.ps1 -WindowStyle Hidden
+Process ID: 8284
+PSVersion: 5.1.17763.3770
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.17763.3770
+BuildVersion: 10.0.17763.3770
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is G:\HR Tech\Logs\PowerShell\PowerShell_transcript.CHI-SVR-HR.jOVIEMlQ.20230119141123.txt
+INFO: Found /WorkdayVision/Production/Demographics/Vision_Demographics_Full_20230119_1209.csv to download from sftp site
+INFO: Removing /WorkdayVision/Production/Demographics/Vision_Demographics_Full_20230119_1209.csv from SFTP site
+INFO: Removed file from sftp site
+INFO: Decrypting file to G:\HR Tech\DemographicFiles\FromWorkday\Decrypted with a name of Vision_Demographics_Full_20230119_1209.csv
+INFO: Downloaded and encrypted file
+INFO: Removing downloaded encrypted file
+INFO: Running BR Program to enhance file
+INFO: BR Program finished running
+INFO: Removing decrypted file
+INFO: Removed decrypted file
+INFO: Encrypting file
+INFO: Finding files to remove that are decrypted from BR program
+INFO: Removing decrypted file G:\HR Tech\DemographicFiles\ToOneDeltek\Vision_Demographics_Full_20230119_1209_Enhanced.csv
+INFO: Removed file
+INFO: Removing decrypted file (Vision_Demographics_Full_20230119_1209_Enhanced.csv.FullName)
+Remove-Item : Cannot find path 'G:\HR 
+Tech\DemographicFiles\ToOneDeltek\Vision_Demographics_Full_20230119_1209_Enhanced.csv' because it does not exist.
+At G:\HR Tech\PowerShell Scripts\WorkdayVisionDemographicsEnhancement.ps1:101 char:1
++ Remove-Item -Path $NewDemographics.FullName -Force
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (G:\HR Tech\Demo...09_Enhanced.csv:String) [Remove-Item], 
+ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+Remove-Item : Cannot find path 'G:\HR
+Tech\DemographicFiles\ToOneDeltek\Vision_Demographics_Full_20230119_1209_Enhanced.csv' because it
+does not exist.
+At G:\HR Tech\PowerShell Scripts\WorkdayVisionDemographicsEnhancement.ps1:101 char:1
++ Remove-Item -Path $NewDemographics.FullName -Force
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (G:\HR Tech\Demo...09_Enhanced.csv:String) [Remove-
+   Item], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.RemoveItemCommand
+
+INFO: Uploading G:\HR Tech\DemographicFiles\ToOneDeltek\Encrypted\Vision_Demographics_Full_20230119_1209_Enhanced.csv.pgp to sftp.tylin.com Destination: /WorkdayVision/Staging/Demographics/Outbound
+INFO: Finished running process, please review log for WARNING, reach out to Mark.Ince@tylin.com or ServiceDesk@tylin.com if further assistance is required
+**********************
+Windows PowerShell transcript end
+End time: 20230119141145
+**********************
